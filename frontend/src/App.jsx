@@ -26,8 +26,6 @@ import AdminOrder from './components/Admin/Order';
 import Customerdetails from './components/Admin/Customerdetails';
 import Companydetails from './components/Admin/Companydetails';
 import CompanyProfile from './components/Company/CompanyProfile';
-
-
 import Contactus from './components/Admin/Contactus';
 import Aboutus from './components/Admin/Aboutus';
 import { Home } from './components/Home/Home';
@@ -40,7 +38,11 @@ import PlaceOrder from './components/Customer/PlaceOrder';
 import { Faqs } from './components/Home/Faqs';
 import Register from './components/Home/Register';
 import Footer from './components/Home/Footer';
+<<<<<<< HEAD
 import Products from './components/Home/Products';
+=======
+import Products from './components/Home/Products'
+>>>>>>> a20ccb1b0a3de61a88906b17e8fcdb2452a6d060
 
 function App() {
 
@@ -54,42 +56,51 @@ function App() {
           <Route path='/Aboutus' element={<Aboutus />} />
           <Route path="/Contactus" element={<Contactus />} />
           {/* home */}
+<<<<<<< HEAD
             <Route path='/' element={<Home />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path='/products' element={<Products />} />
             <Route path ="/faqs" element ={<Faqs />} />
+=======
+
+          <Route path='/' element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/faqs" element={<Faqs />} />
+          <Route path='/products' element={<Products />}/>
+>>>>>>> a20ccb1b0a3de61a88906b17e8fcdb2452a6d060
           {/* admin */}
-            <Route path="/admin" element={<AdminLayout />}>
-              <Route path="dash" element={<Dash />} />
-              <Route path="Customerdetails" element={<Customerdetails />} />
-              <Route path="Companydetails" element={<Companydetails />} />
-              <Route path='Order' element={<AdminOrder />} />
-            </Route>
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="dash" element={<Dash />} />
+            <Route path="Customerdetails" element={<Customerdetails />} />
+            <Route path="Companydetails" element={<Companydetails />} />
+            <Route path='Order' element={<AdminOrder />} />
+          </Route>
           {/* customer */}
-            <Route path="/customer" element={<CustomerLayout />}>
-              <Route path="dash" element={<ProuductList />} />
-              <Route path="CartItems" element={<CartItems />} />
-              <Route path="PlaceOrder" element={<PlaceOrder/>}/>
-              <Route path="profile" element={<CustomerProfile />} />
-              <Route path="productDetail" element={<ProductDetail/>} />
-              
-              
-            </Route>
+          <Route path="/customer" element={<CustomerLayout />}>
+            <Route path="dash" element={<ProuductList />} />
+            <Route path="CartItems" element={<CartItems />} />
+            <Route path="PlaceOrder" element={<PlaceOrder />} />
+            <Route path="profile" element={<CustomerProfile />} />
+            <Route path="productDetail" element={<ProductDetail />} />
+
+
+          </Route>
           {/* company */}
             <Route path="/company/*" element={<CompanyLayout />} >
               <Route exact path="dash" element={<CompanyDashboard />} />
               <Route exact path="add-product" element={<AddProduct />} />
               <Route exact path="display-product" element={<ViewProducts />} />
-              <Route exact path="update/:product_id" element={<UpdateProduct />} />
+              <Route exact path="update/:productID" element={<UpdateProduct />} />
               <Route exact path="customer" element={<Customer />} />
               <Route exact path="order" element={<Order />} />
               <Route exact path="review" element={<Review />} />
-              <Route exact path="reviewlayout/:product_id" element={<ReviewLayout />} />
+              <Route exact path="reviewlayout/:productID" element={<ReviewLayout />} />
               <Route exact path="profile" element={<CompanyProfile/>}/>
             </Route>
         </Routes>
-          <Footer/>
+        <Footer />
       </Router>
       {/* <Sidebar
           sidebarToggle={sidebarToggle}
