@@ -40,6 +40,7 @@ import PlaceOrder from './components/Customer/PlaceOrder';
 import { Faqs } from './components/Home/Faqs';
 import Register from './components/Home/Register';
 import Footer from './components/Home/Footer';
+import Products from './components/Home/Products';
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path='/products' element={<Products />} />
             <Route path ="/faqs" element ={<Faqs />} />
           {/* admin */}
             <Route path="/admin" element={<AdminLayout />}>

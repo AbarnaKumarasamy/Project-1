@@ -3,8 +3,6 @@ import React from "react";
 
 function PlaceOrder() {
 
-
-
     const payNow = () => {
 
         <div>
